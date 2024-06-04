@@ -39,7 +39,7 @@ def tylaoa(call):
 """)
 @bot.callback_query_handler(func=lambda call: True)
 def tylaoa(call):
-    if call.data == "kottab":
+    elif call.data == "kottab":
         voicess = "https://t.me/telawatnader/" + str(random.randint(7, 265))
     bot.send_voice(call.message.chat.id, voicess, caption="""
 ✓  🌿 〈〈 صـل على سيدنا محمد 〉〉
