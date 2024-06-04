@@ -10,7 +10,7 @@ is_bot_active = True
 @bot.message_handler(commands=["start"])
 def start(message):
     private = types.InlineKeyboardMarkup()
-     button = types.InlineKeyboardButton("✓ تلاوة ", callback_data="quran")
+    button = types.InlineKeyboardButton("✓ تلاوة ", callback_data="quran")
     buttoon = types.InlineKeyboardButton("✓ صورة دينية ", callback_data="religious")
     buttn = types.InlineKeyboardButton("خطب دينيه", callback_data="quraan")
     buttin = types.InlineKeyboardButton("الصلي علي النبي", callback_data="qurn")
