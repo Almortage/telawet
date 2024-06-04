@@ -7,6 +7,8 @@ tok = Config.TG_BOT_TOKEN
 
 bot = telebot.TeleBot(tok)
 is_bot_active = True  
+
+
 @bot.message_handler(commands=["start"])
 def start(message):
     private = types.InlineKeyboardMarkup()
@@ -19,13 +21,12 @@ def start(message):
     bkotob = types.InlineKeyboardButton("كتب دينية", callback_data="kotob")
     bkotobb = types.InlineKeyboardButton("اوقات الصلاة ⏱️", web_url="https://dev-almortageltech.pantheonsite.io/time")
     butteon = types.InlineKeyboardButton("مطور البوت", url="https://t.me/Almortagel_12")
-    buttion = types.InlineKeyboardButton("قناة البوت", url="https://t.me/AlmortagelTech")
     private.add(button,buttoon)
     private.add(buttin,buttn)
     private.add(bstart,butin)
     private.add(bkotob,bkotobb)
-    private.add(butteon,buttion)      
-    bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
+    private.add(butteon)      
+bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
 ✓ 👋 مرحبا بك عزيزي انا بوت اسلامي اقدم صور دينيه وتلاوات باصوات وابدعات شيوخ متعددين 
 لعرض المصحف ارسل رقم الصفحة
 ✓ 🔍 انقر على الزر ادناة لارسال القران
@@ -118,8 +119,7 @@ def msgs(message):
     text = message.text
     
             
-print("@Almortagel_12")
-print("\033[1;33m• Running..... /start ")
+print("تم تشغيل البوت اذا وقف معك شي تواصل معي @Almortagel_12")
 bot.polling(none_stop=True)
 """
 Dev /- @Almortagel_12
