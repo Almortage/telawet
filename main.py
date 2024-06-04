@@ -24,11 +24,14 @@ def start(message):
     private.add(buttin,buttn)
     private.add(bstart,butin)
     private.add(bkotob,bkotobb)
-    private.add(butteon,buttion)      bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
+    private.add(butteon,buttion)      
+bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
 ✓ 👋 مرحبا بك عزيزي انا بوت اسلامي اقدم صور دينيه وتلاوات باصوات وابدعات شيوخ متعددين 
 لعرض المصحف ارسل رقم الصفحة
 ✓ 🔍 انقر على الزر ادناة لارسال القران
 """, reply_markup=private)
+
+
 @bot.callback_query_handler(func=lambda call: True)
 def tylaoa(call):
     if call.data == "quran":
