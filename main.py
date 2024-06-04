@@ -10,11 +10,21 @@ is_bot_active = True
 @bot.message_handler(commands=["start"])
 def start(message):
     private = types.InlineKeyboardMarkup()
-    button = types.InlineKeyboardButton("✓ تلاوة ", callback_data="quran")
+     button = types.InlineKeyboardButton("✓ تلاوة ", callback_data="quran")
+    buttoon = types.InlineKeyboardButton("✓ صورة دينية ", callback_data="religious")
+    buttn = types.InlineKeyboardButton("خطب دينيه", callback_data="quraan")
+    buttin = types.InlineKeyboardButton("الصلي علي النبي", callback_data="qurn")
+    bstart = types.InlineKeyboardButton("المصحف", callback_data="starttt")
+    butin = types.InlineKeyboardButton("احاديث دينية", callback_data="religiou")
+    bkotob = types.InlineKeyboardButton("كتب دينية", callback_data="kotob")
+    bkotobb = types.InlineKeyboardButton("اوقات الصلاة ⏱️", web_url="https://dev-almortageltech.pantheonsite.io/time")
     butteon = types.InlineKeyboardButton("مطور البوت", url="https://t.me/Almortagel_12")
-    buttoon = types.InlineKeyboardButton("قناة البوت", url="https://t.me/AlmortagelTech")
-    private.add(button)
-    private.add(butteon,buttoon)   
+    buttion = types.InlineKeyboardButton("قناة البوت", url="https://t.me/AlmortagelTech")
+    private.add(button,buttoon)
+    private.add(buttin,buttn)
+    private.add(bstart,butin)
+    private.add(bkotob,bkotobb)
+    private.add(butteon,buttion)   
     bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
 ✓ 👋 مرحبا بك عزيزي انا بوت اسلامي اقدم صور دينيه وتلاوات باصوات وابدعات شيوخ متعددين 
 لعرض المصحف ارسل رقم الصفحة
@@ -34,10 +44,17 @@ def tylaoa(call):
     bot.send_voice(call.message.chat.id, voicess, caption="""
 ✓  🌿 〈〈 صـل على سيدنا محمد 〉〉
 """)
+    elif call.data == "religious":
+        voicees = "https://t.me/livequrann/" + str(random.randint(22, 221))
+        bot.send_photo(call.message.chat.id, voicees, caption="""
+✓  🌿 〈〈 صـل على سيدنا محمد 〉〉
+""")
     elif call.data == "nqsbndy":
         voicesss = "https://t.me/ggcnjj/" + str(random.randint(2, 114))
-        bot.send_voice(call.message.chat.id, voicesss, caption="""ابتهلات الشيخ نقشبندي""")
-    elif text == "عبدالباسط" or date == "nkssd":
+        bot.send_voice(call.message.chat.id, voicesss, caption="""
+✓  🌿 〈〈 صـل على سيدنا محمد 〉〉
+""")
+    elif call.data == "nkssd":
         voice_url = "https://t.me/telawatnader/" + str(random.randint(7, 265))
         bot.send_voice(message.chat.id, voice_url, caption="🥹♥ ¦ تـم اختيـار الشيخ عبدالباسط لـك")
     elif call.data == "quraan":
