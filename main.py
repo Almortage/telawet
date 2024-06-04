@@ -118,7 +118,8 @@ def msgs(message):
     text = message.text
     
             
-print("تم تشغيل البوت اذا وقف معك شي تواصل معي @Almortagel_12")
+print("@Almortagel_12")
+print("\033[1;33m• Running..... /start ")
 bot.polling(none_stop=True)
 """
 Dev /- @Almortagel_12
