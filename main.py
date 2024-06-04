@@ -37,13 +37,6 @@ def tylaoa(call):
         bot.send_voice(call.message.chat.id, voices, caption="""
 ✓  🌿 〈〈 صـل على سيدنا محمد 〉〉
 """)
-@bot.callback_query_handler(func=lambda call: True)
-def tylaoa(call):
-    elif call.data == "kottab":
-        voicess = "https://t.me/telawatnader/" + str(random.randint(7, 265))
-    bot.send_voice(call.message.chat.id, voicess, caption="""
-✓  🌿 〈〈 صـل على سيدنا محمد 〉〉
-""")
     elif call.data == "religious":
         voicees = "https://t.me/livequrann/" + str(random.randint(22, 221))
         bot.send_photo(call.message.chat.id, voicees, caption="""
@@ -70,7 +63,7 @@ def tylaoa(call):
     elif call.data == "kotob":
         voic = "https://t.me/kotobeslameah/" + str(random.randint(2, 1950))
         bot.send_document(call.message.chat.id, voic, caption="""
- تم اختيار هذا الكتاب لك
+تم اختيار هذا الكتاب لك
 """)
 @bot.callback_query_handler(func=lambda call: True)
 def starttt(call):
