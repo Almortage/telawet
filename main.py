@@ -119,10 +119,7 @@ def msgs(message):
     text = message.text
     
             
-print("تم تشغيل البوت اذا وقف معك شي تواصل معي @Almortagel_12")
-bot.polling(none_stop=True)
-"""
-Dev /- @Almortagel_12
-Ch /- @AlmortagelTech
-In /- 2024/2/14
-"""
+print("\033[4;37m-"*10)
+print("\033[1;35m• Running..... /start ")
+print("\033[4;37m-"*10)
+bot.polling(True)
