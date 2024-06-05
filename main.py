@@ -9,7 +9,7 @@ bot = telebot.TeleBot(tok)
 is_bot_active = True  
 
 
-@bot.message_handler(commands=["start"])
+@bot.message_handler(commands=['start']) 
 def start(message):
     private = types.InlineKeyboardMarkup()
     button = types.InlineKeyboardButton("✓ تلاوة ", callback_data="quran")
