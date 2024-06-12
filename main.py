@@ -6,7 +6,7 @@ from telebot import types
 tok = Config.TG_BOT_TOKEN
 
 bot = telebot.TeleBot(tok)
-is_bot_active = True  
+
 
 
 @bot.message_handler(commands=['start']) 
@@ -18,15 +18,15 @@ def start(message):
     buttin = types.InlineKeyboardButton("✓ الصلي علي النبي", callback_data="qurn")
     bstart = types.InlineKeyboardButton("✓ المصحف", callback_data="starttt")
     butin = types.InlineKeyboardButton("✓ احاديث دينية", callback_data="religiou")
-    bkotob = types.InlineKeyboardButton("كتب دينية", callback_data="kotob")
+    bkotob = types.InlineKeyboardButton("✓ كتب دينية", callback_data="kotob")
     bkotobb = types.InlineKeyboardButton("✓ اوقات الصلاة ⏱️", web_url="https://dev-almortageltech.pantheonsite.io/time")
-    butteon = types.InlineKeyboardButton("مطور البوت", url="https://t.me/Almortagel_12")
+    butteon = types.InlineKeyboardButton("✓ المطور", url="https://t.me/Almortagel_12")
     private.add(button,buttoon)
     private.add(buttin,buttn)
     private.add(bstart,butin)
     private.add(bkotob,bkotobb)
     private.add(butteon) 
-    bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
+  bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
 ✓ 👋 مرحباً بك عزيزي في بوت المقاطع الدينية 
 ✓ 🔍 انقر على الزر ادناة لارسال ماتريدة
 """, reply_markup=private)
