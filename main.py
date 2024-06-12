@@ -20,15 +20,14 @@ def start(message):
     butin = types.InlineKeyboardButton("✓ احاديث دينية", callback_data="religiou")
     bkotob = types.InlineKeyboardButton("✓ كتب دينية", callback_data="kotob")
     bkotobb = types.InlineKeyboardButton("✓ اوقات الصلاة ⏱️", web_url="https://dev-almortageltech.pantheonsite.io/time")
-    butteon = types.InlineKeyboardButton("✓ المطور", url="https://t.me/Almortagel_12")
+    butteon = types.InlineKeyboardButton("✓ مطور البوت", url="https://t.me/Almortagel_12")
     private.add(button,buttoon)
     private.add(buttin,buttn)
     private.add(bstart,butin)
     private.add(bkotob,bkotobb)
     private.add(butteon) 
   bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
-✓ 👋 مرحباً بك عزيزي في بوت المقاطع الدينية 
-✓ 🔍 انقر على الزر ادناة لارسال ماتريدة
+صلي على محمد
 """, reply_markup=private)
 @bot.callback_query_handler(func=lambda call: True)
 def tylaoa(call):
