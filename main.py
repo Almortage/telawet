@@ -26,7 +26,7 @@ def start(message):
     private.add(bstart,butin)
     private.add(bkotob,bkotobb)
     private.add(butteon) 
-      bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
+   bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
 ✓ 👋 مرحبا بك عزيزي انا بوت اسلامي اقدم صور دينيه وتلاوات باصوات وابدعات شيوخ متعددين 
 لعرض المصحف ارسل رقم الصفحة
 ✓ 🔍 انقر على الزر ادناة لارسال القران
