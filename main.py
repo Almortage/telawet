@@ -25,7 +25,7 @@ def send_welcome(message):
     InlineKeyboardButton("كتب دينية", callback_data="kotob")]
     [InlineKeyboardButton("احاديث دينية", callback_data="religiou"),
     types.InlineKeyboardButton("الصلي علي النبي", callback_data="qurn")]
-    [.InlineKeyboardButton("✓ صورة دينية ", callback_data="religious")]]
+    [InlineKeyboardButton("✓ صورة دينية ", callback_data="religious")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     bot.send_message(chat_id=message.chat.id, text=message_text, reply_markup=reply_markup)
 
