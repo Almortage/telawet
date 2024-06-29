@@ -1,7 +1,7 @@
 from config import Config
 import os
 import telebot, requests, random
-from telebot import types 
+from telebot.types import InlineKeyboardButton,InlineKeyboardMarkup 
 
 tok = Config.TG_BOT_TOKEN
 
