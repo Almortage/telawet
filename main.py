@@ -8,9 +8,13 @@ tok = Config.TG_BOT_TOKEN
 bot = telebot.TeleBot(tok)
 
 
-
-@bot.message_handler(commands=['start']) 
-def start(message):
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+    name = message.from_user.first_name
+    message_text = f"""اهلاً〘 {name} 〙.
+انا بوت اسلامي
+اذا اردت بايو ديني اكتب ﹛بايو ديني ﹜.
+اذا اردت شي اضغط علي الازرار"""
     private = types.InlineKeyboardMarkup()
     button = types.InlineKeyboardButton("✓ تلاوة ", callback_data="quran")
     buttoon = types.InlineKeyboardButton("✓ صورة دينية ", callback_data="religious")
@@ -26,9 +30,7 @@ def start(message):
     private.add(bstart,butin)
     private.add(bkotob,bkotobb)
     private.add(butteon) 
-  bot.send_photo(message.chat.id,"https://t.me/ifuwufuj/29",caption="""
-صلي على محمد
-""", reply_markup=private)
+  bot.send_message(chat_id=message.chat.id, text=message_text, reply_markup=private)
 @bot.callback_query_handler(func=lambda call: True)
 def tylaoa(call):
     if call.data == "quran":
