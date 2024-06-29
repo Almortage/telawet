@@ -30,7 +30,8 @@ def send_welcome(message):
     private.add(bstart,butin)
     private.add(bkotob,bkotobb)
     private.add(butteon) 
-  bot.send_message(chat_id=message.chat.id, text=message_text, reply_markup=private)
+    bot.send_message(chat_id=message.chat.id, text=message_text, reply_markup=private)
+    
 @bot.callback_query_handler(func=lambda call: True)
 def tylaoa(call):
     if call.data == "quran":
